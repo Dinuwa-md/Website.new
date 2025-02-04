@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Push - BLACKY-X-MD</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background: #FF0000;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #cc0000;
+        }
+
+        .push-btn {
+            background: #0088CC;
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Push - BLACKY-X-MD</h1>
+        <p>Fill the form below to contact us!</p>
+
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <button class="push-btn" onclick="sendPush()">Enable Push Notifications</button>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("✅ Your message has been sent successfully!");
+        });
+
+        function sendPush() {
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    new Notification("🔔 BLACKY-X-MD", {
+                        body: "
+                        body: "🔥 New updates available! Click here to check out.",
+                        icon: "your_logo_path_here"
+                    });
+                } else {
+                    alert("❌ Push notifications are blocked. Enable them in browser settings.");
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+______________________
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Push - BLACKY-X-MD</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background: #FF0000;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #cc0000;
+        }
+
+        .push-btn {
+            background: #0088CC;
+            padding: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Push - BLACKY-X-MD</h1>
+        <p>ඔයාගේ Contact Info Submit කරන්න</p>
+
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="ඔයාගේ නම" required>
+            <input type="email" id="email" placeholder="ඔයාගේ Email" required>
+            <textarea id="message" rows="4" placeholder="ඔයාගේ පණිවිඩය" required></textarea>
+            <button type="submit">Send to Telegram</button>
+        </form>
+
+        <button class="push-btn" onclick="sendPush()">Enable Push Notifications</button>
+    </div>
+
+    <script>
+        // Telegram Bot Info (මෙතන ඔබේ Bot Token එක සහ Chat ID එක දාන්න)
+        const botToken = "8102200382:AAF1Dm83EM66BJxc-6T0XsHY0qj8PaQb2lc"; // <-- ඔබේ Telegram Bot Token එක
+        const chatId = "7824821270"; // <-- ඔබේ Telegram Chat ID එක
+
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            let telegramMessage = `🔥 **New Contact Form Submission** 🔥\n\n👤 Name: ${name}\n📧 Email: ${email}\n💬 Message: ${message}`;
+
+            let telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(telegramMessage)}`;
+
+            fetch(telegramUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert("✅ Message Sent Successfully to Telegram!");
+                    } else {
+                        alert("❌ Error Sending Message. Check Bot Token & Chat ID.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("❌ Network Error!");
+                });
+        });
+
+        function sendPush() {
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    new Notification("🔔 BLACKY-X-MD", {
+                        body: "🔥 New updates available! Click here to check out.",
+                        icon: "your_logo_path_here"
+                    });
+                } else {
+                    alert("❌ Push notifications are blocked. Enable them in browser settings.");
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
